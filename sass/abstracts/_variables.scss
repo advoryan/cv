@@ -1,0 +1,21 @@
+$wrapper-bg-color: gray;
+$bg-color: rgb(238, 232, 232);
+$main-font-family: 'Roboto', sans-serif;
+$small-font-family: 'News Cycle', sans-serif;
+// $main-font-size: 14px;
+
+$maxScreenWidth: 1280;
+$maxTabletWidth: 767;
+$maxMobileWidth: 320;
+
+@mixin adapive-font-size($max, $min) {
+    @media (max-width: ($maxScreenWidth + px)) {
+        $widthGap: $maxScreenWidth - $maxMobileWidth;
+        $a: (-1/$widthGap*$min) + (1/$widthGap*$max);
+        $b: ($maxScreenWidth/$widthGap*$min) + ($maxMobileWidth/-$widthGap*$max);
+        font-size: calc(100vw * #{$a} + #{$b + px});
+    } 
+    @media (min-width: ($maxScreenWidth + px)) {
+        font-size: $max + px;
+    }
+}

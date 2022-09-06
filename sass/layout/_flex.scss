@@ -1,0 +1,8 @@
+body {
+    background-color: $wrapper-bg-color;
+    font-family: $main-font-family;
+    @include adapive-font-size(100, 16);
+}
+.test {
+    font-size: 100px;
+}
