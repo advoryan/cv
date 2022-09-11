@@ -2,13 +2,20 @@
 .wrapper {
     display: flex;
     min-height: 100vh;
-    padding: 1rem;
+    padding: 0 1.5rem;
     font-size: 2.4rem;
-    &__container { 
+    &__container {
+        display: flex;
+        flex-direction: column;
         max-width: $maxScreenWidth + px;
         width: 100%;
         margin: 0 auto;
-        padding: 0.5rem;
     }
 }
+.flex-container {
+    display: flex;
+    flex: 1 1 100%;
+    gap: 3rem;
+}
+
 

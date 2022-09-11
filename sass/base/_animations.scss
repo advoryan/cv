@@ -8,10 +8,10 @@
     &:after {
         content: "";
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         right: 0;
         width: 0;
-        bottom: .5rem;
+        bottom: 0.9rem;
         background: $orange;
         height: 3px;
         transition-property: width;

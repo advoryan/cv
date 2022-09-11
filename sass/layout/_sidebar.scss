@@ -1,0 +1,86 @@
+.aside, main {
+    display: flex;
+    flex-direction: column;
+}
+.aside {
+    background-color: rgb(49,54,68,0.95);
+    color: rgb(243, 236, 236);
+    min-width: 200px;
+    width: 25%;
+    min-width: 200px;
+    & .photo {
+    max-width: 100%;
+    }
+}
+.cv-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    text-shadow: rgb(44, 43, 43, 0.5) 2px 2px 4px;
+    &__name {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        padding: 1% 0 0 5%;
+        line-height: 2.5;
+        backdrop-filter: brightness(80%) ;
+    }
+    &__list {
+        padding-top: 3%;
+        line-height: 4rem;
+        margin-bottom: 3%;
+    }
+    &__link {
+        display: flex;
+        width: 100%;
+        &:hover, :focus {
+            transform: scale(1.015);
+            transition: scale 0.3s ease-out;
+            backdrop-filter: brightness(80%);
+            width: 99%;
+        }
+    }
+    &__logo {
+        display: flex;
+        width: 100%;
+        position: relative;
+        padding-left: 20%;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 12%;
+            left: 5%;
+            width: 3.5rem;
+            height: 3.5rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+            filter: invert(1);
+        }
+        &_phone {
+            &:before {background-image: url("../../assets/images/svg/smartphone.svg")}
+        }
+        &_linkedin {
+            &:before {background-image: url("../../assets/images/svg/linkedin.svg")}
+        }
+        &_github {
+            &:before {background-image: url("../../assets/images/svg/github.svg")}
+        }
+        &_telegram {
+            &:before {background-image: url("../../assets/images/svg/telegram.svg")}
+        }
+        &_email {
+            &:before {background-image: url("../../assets/images/svg/email.svg")}
+        }
+    }
+    &__skill {
+        display: flex;
+        width: 100%;
+        margin: 0 6%;
+        border-top: 1px solid;
+        border-image: linear-gradient(to left, transparent  5%,  rgba(245, 241, 241, 0.1) 20%, rgba(245, 241, 241, 0.1) 80%, transparent 95%) 1;
+        &_no-top-border {
+            border-top: none;
+        }
+    }
+}
+
