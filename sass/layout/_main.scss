@@ -1,0 +1,90 @@
+.main {
+    padding: 2rem;
+    flex: 1 1 100%;
+    & .my-name {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $aside-bg-color;
+        margin-bottom: 4.5rem;
+        & h1 {
+            line-height: 7rem;
+            font-size: 4.5rem;
+        }
+        & h3 {
+            font-size: 3rem;
+            color: $orange;
+        }
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    &__name {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+    }
+    &__line {
+        height: 100%;
+        position: relative;
+        flex: 1 1 100%;
+        border-bottom: 1px $aside-bg-color solid;
+        top: 0;
+        margin: 0 2rem
+    }
+    &__logo {
+        width: 6rem;
+        height: 4rem;
+        border: 1px $aside-bg-color solid;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        margin-right: 1rem;
+        background-color: rgb(206, 201, 187, 0.55);
+        filter: invert(1);
+        &_education {
+            background-image: url("../../assets/images/svg/education.svg");
+        }
+        &_experience {
+            background-image: url("../../assets/images/svg/education.svg");
+        }
+    }
+    margin-bottom: 2rem;
+}
+
+.description {
+    display: flex;
+    font-size: 1.8rem;
+    &__period {
+        padding-left: 1.5rem;
+        width: 20%;
+        height: 100%;
+        min-width: 18rem;
+        font-style: oblique;
+    }
+    &__item {
+        width: 80%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &_RSS-certificate {
+            display: block;
+            position: absolute;
+            text-align: center;
+            font-size: 1rem;
+            left: 29.5rem;
+            top: 0;
+            background-image: url(../../assets/images/svg/logo-rs.svg);
+            background-repeat: no-repeat;
+            width: 7rem;
+            height: 10rem;
+            background-size: 7rem;
+            background-position: center;
+        }
+    }
+    &__header {
+        font-weight: bold;
+    }
+    margin-bottom: 1.5rem;
+}

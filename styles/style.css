@@ -80,6 +80,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Myriad Pro";
+  src: url(../../assets/fonts/MyriadPro-Bold.woff);
+  font-weight: bold;
+  font-style: normal;
+}
 html {
   scroll-behavior: smooth;
   font-family: "Myriad Pro";
@@ -160,6 +166,7 @@ html {
   display: flex;
   color: black;
   position: sticky;
+  z-index: 100;
 }
 .header__nav {
   top: 0;
@@ -175,10 +182,10 @@ html {
 }
 .nav__url-container {
   display: flex;
-  min-height: 5rem;
+  min-height: 6rem;
 }
 .nav__url {
-  color: rgb(34, 77, 105);
+  color: rgba(49, 54, 68, 0.95);
   transition: color 0.5s ease-out;
 }
 .nav__url:hover, .nav__url :focus, .nav__url :active {
@@ -226,16 +233,13 @@ html {
   background-image: url("../../assets/images/svg/github.svg");
 }
 
-.aside, main {
+.aside {
   display: flex;
   flex-direction: column;
-}
-
-.aside {
   background-color: rgba(49, 54, 68, 0.95);
   color: rgb(243, 236, 236);
   min-width: 200px;
-  width: 25%;
+  width: 35%;
   min-width: 200px;
 }
 .aside .photo {
@@ -257,7 +261,7 @@ html {
 }
 .cv-list__list {
   padding-top: 3%;
-  line-height: 4rem;
+  line-height: 4.2rem;
   margin-bottom: 3%;
 }
 .cv-list__link {
@@ -266,7 +270,7 @@ html {
 }
 .cv-list__link:hover, .cv-list__link :focus {
   transform: scale(1.015);
-  transition: scale 0.3s ease-out;
+  transition: 0.3s ease-out;
   backdrop-filter: brightness(80%);
   width: 99%;
 }
@@ -297,6 +301,9 @@ html {
 .cv-list__logo_github:before {
   background-image: url("../../assets/images/svg/github.svg");
 }
+.cv-list__logo_codewars:before {
+  background-image: url("../../assets/images/svg/codewars.svg");
+}
 .cv-list__logo_telegram:before {
   background-image: url("../../assets/images/svg/telegram.svg");
 }
@@ -307,11 +314,102 @@ html {
   display: flex;
   width: 100%;
   margin: 0 6%;
-  border-top: 1px solid;
-  border-image: linear-gradient(to left, transparent 5%, rgba(245, 241, 241, 0.1) 20%, rgba(245, 241, 241, 0.1) 80%, transparent 95%) 1;
+  border-top: 0.1px solid;
+  border-image: linear-gradient(to right, rgba(245, 241, 241, 0.2) 20%, rgba(245, 241, 241, 0.05) 80%, transparent 99%) 0.5;
 }
 .cv-list__skill_no-top-border {
   border-top: none;
+}
+
+.main {
+  padding: 2rem;
+  flex: 1 1 100%;
+}
+.main .my-name {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(49, 54, 68, 0.95);
+  margin-bottom: 4.5rem;
+}
+.main .my-name h1 {
+  line-height: 7rem;
+  font-size: 4.5rem;
+}
+.main .my-name h3 {
+  font-size: 3rem;
+  color: rgb(192, 81, 41);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.title__name {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.title__line {
+  height: 100%;
+  position: relative;
+  flex: 1 1 100%;
+  border-bottom: 1px rgba(49, 54, 68, 0.95) solid;
+  top: 0;
+  margin: 0 2rem;
+}
+.title__logo {
+  width: 6rem;
+  height: 4rem;
+  border: 1px rgba(49, 54, 68, 0.95) solid;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 1rem;
+  background-color: rgba(206, 201, 187, 0.55);
+  filter: invert(1);
+}
+.title__logo_education {
+  background-image: url("../../assets/images/svg/education.svg");
+}
+.title__logo_experience {
+  background-image: url("../../assets/images/svg/education.svg");
+}
+
+.description {
+  display: flex;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.description__period {
+  padding-left: 1.5rem;
+  width: 20%;
+  height: 100%;
+  min-width: 18rem;
+  font-style: oblique;
+}
+.description__item {
+  width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.description__item_RSS-certificate {
+  display: block;
+  position: absolute;
+  text-align: center;
+  font-size: 1rem;
+  left: 29.5rem;
+  top: 0;
+  background-image: url(../../assets/images/svg/logo-rs.svg);
+  background-repeat: no-repeat;
+  width: 7rem;
+  height: 10rem;
+  background-size: 7rem;
+  background-position: center;
+}
+.description__header {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
