@@ -1,10 +1,11 @@
+/* _variables.scss */
 $wrapper-bg-color: gray;
-$bg-color: rgb(238, 232, 232);
-$main-font-family: 'Roboto', sans-serif;
-$small-font-family: 'News Cycle', sans-serif;
-// $main-font-size: 14px;
+$bg-color: rgb(251, 255, 252);
+$bg-color-transparent: rgb(251, 255, 252, 0.8);
+$orange:  rgb(201, 65, 15);
+$main-font: "Myriad Pro";
 
-$maxScreenWidth: 1280;
+$maxScreenWidth: 1024;
 $maxTabletWidth: 767;
 $maxMobileWidth: 320;
 

@@ -1,0 +1,32 @@
+/* _header.scss */
+.header {
+    display: flex;
+    color: black;
+    position: sticky;
+    &__nav {  
+        top: 0;    
+    }
+}
+
+.nav {
+    width: 100%;
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: min(3vw, 10rem);
+    }
+    &__url-container {
+        display: flex;
+        min-height: 5rem;
+     }
+    &__url {
+        color: black;
+        transition: color 0.5s ease-out;
+        &:hover, :focus, :active {
+            color: $orange;
+            transition: color 0.5s ease-out;
+        }
+    }
+
+}
+
