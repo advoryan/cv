@@ -4,9 +4,6 @@
     color: black;
     position: sticky;
     z-index: 100;
-    &__nav {  
-        top: 0;    
-    }
 }
 .nav {
     width: 100%;
@@ -54,13 +51,4 @@
             filter: invert(1);
         }
     }
-}
-.phone {
-    &:before {background-image: url("../../assets/images/svg/smartphone.svg")}
-}
-.linkedin {
-    &:before {background-image: url("../../assets/images/svg/linkedin.svg")}
-}
-.github {
-    &:before {background-image: url("../../assets/images/svg/github.svg")}
 }

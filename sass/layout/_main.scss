@@ -5,7 +5,7 @@
         font-weight: bold;
         text-transform: uppercase;
         color: $aside-bg-color;
-        margin-bottom: 4.5rem;
+        margin-bottom: 2.5rem;
         & h1 {
             line-height: 7rem;
             font-size: 4.5rem;
@@ -23,6 +23,7 @@
     &__name {
         font-size: 2.5rem;
         text-transform: uppercase;
+        white-space: nowrap;
     }
     &__line {
         height: 100%;
@@ -34,20 +35,23 @@
     }
     &__logo {
         width: 6rem;
-        height: 4rem;
+        height: 4.5rem;
         border: 1px $aside-bg-color solid;
         border-radius: 50%;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 20px;
+        background-size: 20px 20px;
         margin-right: 1rem;
         background-color: rgb(206, 201, 187, 0.55);
         filter: invert(1);
         &_education {
-            background-image: url("../../assets/images/svg/education.svg");
+            background-image: url("../assets/images/svg/education.svg");
         }
-        &_experience {
-            background-image: url("../../assets/images/svg/education.svg");
+        &_experiance {
+            background-image: url("../assets/images/svg/job.svg");
+        }
+        &_person {
+            background-image: url("../assets/images/svg/person.svg");
         }
     }
     margin-bottom: 2rem;
@@ -75,7 +79,7 @@
             font-size: 1rem;
             left: 29.5rem;
             top: 0;
-            background-image: url(../../assets/images/svg/logo-rs.svg);
+            background-image: url(../assets/images/svg/logo-rs.svg);
             background-repeat: no-repeat;
             width: 7rem;
             height: 10rem;
@@ -85,6 +89,12 @@
     }
     &__header {
         font-weight: bold;
+    }
+    &__text {
+        margin-right: 7rem;
+        & ul li {
+            list-style: point inside url("../assets/images/svg/small-check-mark-icon.svg");
+        }
     }
     margin-bottom: 1.5rem;
 }

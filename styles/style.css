@@ -93,7 +93,7 @@ html {
 }
 
 .gray {
-  background-color: rgba(102, 90, 90, 0.548);
+  background-color: rgba(136, 132, 132, 0.4);
 }
 
 .light {
@@ -168,9 +168,6 @@ html {
   position: sticky;
   z-index: 100;
 }
-.header__nav {
-  top: 0;
-}
 
 .nav {
   width: 100%;
@@ -221,18 +218,6 @@ html {
   filter: invert(1);
 }
 
-.phone:before {
-  background-image: url("../../assets/images/svg/smartphone.svg");
-}
-
-.linkedin:before {
-  background-image: url("../../assets/images/svg/linkedin.svg");
-}
-
-.github:before {
-  background-image: url("../../assets/images/svg/github.svg");
-}
-
 .aside {
   display: flex;
   flex-direction: column;
@@ -270,7 +255,7 @@ html {
 }
 .cv-list__link:hover, .cv-list__link :focus {
   transform: scale(1.015);
-  transition: 0.3s ease-out;
+  transition: 0.1s ease-out;
   backdrop-filter: brightness(80%);
   width: 99%;
 }
@@ -284,7 +269,7 @@ html {
   content: "";
   position: absolute;
   top: 12%;
-  left: 5%;
+  left: 5.1%;
   width: 3.5rem;
   height: 3.5rem;
   background-size: contain;
@@ -293,31 +278,35 @@ html {
   filter: invert(1);
 }
 .cv-list__logo_phone:before {
-  background-image: url("../../assets/images/svg/smartphone.svg");
+  background-image: url("../assets/images/svg/smartphone.svg");
 }
 .cv-list__logo_linkedin:before {
-  background-image: url("../../assets/images/svg/linkedin.svg");
+  background-image: url("../assets/images/svg/linkedin.svg");
 }
 .cv-list__logo_github:before {
-  background-image: url("../../assets/images/svg/github.svg");
+  background-image: url("../assets/images/svg/github.svg");
 }
 .cv-list__logo_codewars:before {
-  background-image: url("../../assets/images/svg/codewars.svg");
+  background-image: url("../assets/images/svg/codewars.svg");
 }
 .cv-list__logo_telegram:before {
-  background-image: url("../../assets/images/svg/telegram.svg");
+  background-image: url("../assets/images/svg/telegram.svg");
 }
 .cv-list__logo_email:before {
-  background-image: url("../../assets/images/svg/email.svg");
+  background-image: url("../assets/images/svg/email.svg");
 }
 .cv-list__skill {
   display: flex;
   width: 100%;
   margin: 0 6%;
+  line-height: 3.5rem;
   border-top: 0.1px solid;
   border-image: linear-gradient(to right, rgba(245, 241, 241, 0.2) 20%, rgba(245, 241, 241, 0.05) 80%, transparent 99%) 0.5;
 }
-.cv-list__skill_no-top-border {
+.cv-list__item:hover {
+  cursor: context-menu;
+}
+.cv-list__item:nth-child(1) .cv-list__skill {
   border-top: none;
 }
 
@@ -329,7 +318,7 @@ html {
   font-weight: bold;
   text-transform: uppercase;
   color: rgba(49, 54, 68, 0.95);
-  margin-bottom: 4.5rem;
+  margin-bottom: 2.5rem;
 }
 .main .my-name h1 {
   line-height: 7rem;
@@ -348,6 +337,7 @@ html {
 .title__name {
   font-size: 2.5rem;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .title__line {
   height: 100%;
@@ -359,21 +349,24 @@ html {
 }
 .title__logo {
   width: 6rem;
-  height: 4rem;
+  height: 4.5rem;
   border: 1px rgba(49, 54, 68, 0.95) solid;
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 20px;
+  background-size: 20px 20px;
   margin-right: 1rem;
   background-color: rgba(206, 201, 187, 0.55);
   filter: invert(1);
 }
 .title__logo_education {
-  background-image: url("../../assets/images/svg/education.svg");
+  background-image: url("../assets/images/svg/education.svg");
 }
-.title__logo_experience {
-  background-image: url("../../assets/images/svg/education.svg");
+.title__logo_experiance {
+  background-image: url("../assets/images/svg/job.svg");
+}
+.title__logo_person {
+  background-image: url("../assets/images/svg/person.svg");
 }
 
 .description {
@@ -401,7 +394,7 @@ html {
   font-size: 1rem;
   left: 29.5rem;
   top: 0;
-  background-image: url(../../assets/images/svg/logo-rs.svg);
+  background-image: url(../assets/images/svg/logo-rs.svg);
   background-repeat: no-repeat;
   width: 7rem;
   height: 10rem;
@@ -410,6 +403,12 @@ html {
 }
 .description__header {
   font-weight: bold;
+}
+.description__text {
+  margin-right: 7rem;
+}
+.description__text ul li {
+  list-style: point inside url("../assets/images/svg/small-check-mark-icon.svg");
 }
 
 /*# sourceMappingURL=style.css.map */
