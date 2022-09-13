@@ -32,7 +32,7 @@
         width: 100%;
         &:hover, :focus {
             transform: scale(1.015);
-            transition: 0.3s ease-out;
+            transition: 0.1s ease-out;
             backdrop-filter: brightness(80%);
             width: 99%;
         }
@@ -46,7 +46,7 @@
             content: "";
             position: absolute;
             top: 12%;
-            left: 5%;
+            left: 5.1%;
             width: 3.5rem;
             height: 3.5rem;
             background-size: contain;
@@ -55,33 +55,37 @@
             filter: invert(1);
         }
         &_phone {
-            &:before {background-image: url("../../assets/images/svg/smartphone.svg")}
+            &:before {background-image: url("../assets/images/svg/smartphone.svg")}
         }
         &_linkedin {
-            &:before {background-image: url("../../assets/images/svg/linkedin.svg")}
+            &:before {background-image: url("../assets/images/svg/linkedin.svg")}
         }
         &_github {
-            &:before {background-image: url("../../assets/images/svg/github.svg")}
+            &:before {background-image: url("../assets/images/svg/github.svg")}
         }
         &_codewars {
-            &:before {background-image: url("../../assets/images/svg/codewars.svg")}
+            &:before {background-image: url("../assets/images/svg/codewars.svg")}
         }
         &_telegram {
-            &:before {background-image: url("../../assets/images/svg/telegram.svg")}
+            &:before {background-image: url("../assets/images/svg/telegram.svg")}
         }
         &_email {
-            &:before {background-image: url("../../assets/images/svg/email.svg")}
+            &:before {background-image: url("../assets/images/svg/email.svg")}
         }
     }
     &__skill {
         display: flex;
         width: 100%;
         margin: 0 6%;
+        line-height: 3.5rem;
         border-top: 0.1px solid;
         border-image: linear-gradient(to right, rgba(245, 241, 241, 0.2) 20%, rgba(245, 241, 241, 0.05) 80%, transparent 99%) 0.5;
-        &_no-top-border {
-            border-top: none;
-        }
+    }
+    &__item:hover {
+        cursor:context-menu;
+    }
+    &__item:nth-child(1) &__skill {
+        border-top: none;
     }
 }
 
