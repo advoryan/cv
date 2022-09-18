@@ -40,6 +40,7 @@ const carousel = document.querySelector(".carousel");
 const framesWrapper = carousel.querySelector(".carousel__frames-wrapper");
 const slideLeftBtn = carousel.querySelector(".carousel__btn_slide-left");
 const slideRightBtn = carousel.querySelector(".carousel__btn_slide-right");
+const about = document.querySelector(".about-slide__text");
 
 const getShiftedSlidesArr = (direction) => {
     let arr = [
@@ -67,25 +68,33 @@ let shiftSlidesArr = getShiftedSlidesArr("slide-left");
 const createSlide = (slideNbr) => {
     let newFrame = document.createElement("div");
     newFrame.className = "carousel__frame";
-    newFrame.innerHTML = projectsJSON[slideNbr].description;
+    newFrame.innerHTML = `
+    <a href="${projectsJSON[slideNbr].sourceURL}" target="_blank">
+        <img src="/assets/images/carousel/${projectsJSON[slideNbr].previewURL}" 
+            alt="${projectsJSON[slideNbr].description}"
+            width="100%">
+    </a>`;
     framesWrapper.append(newFrame);
-
-    // let preview = document.createElement("img");
-    // preview.setAttribute("alt", projectsJSON[slideNbr].previewURL);
-    // preview.setAttribute("src", projectsJSON[slideNbr].sourceURL);
 }
 
 //init: creates 3 slides if projectsJSON has at leat 1 item
 shiftSlidesArr().forEach( slideNbr => {
     createSlide(slideNbr);
 })
+about.innerHTML = projectsJSON[1].description;
 
 const slides = carousel.querySelectorAll(".carousel__frame");
 
 const modifySlide = () => {
     for (let i = 0; i < slides.length; i++) {
-        slides[i].innerHTML = shiftSlidesArr()[i];
+        slides[i].innerHTML = `
+        <a href="${projectsJSON[shiftSlidesArr()[i]].sourceURL}" target="_blank">
+            <img src="/assets/images/carousel/${projectsJSON[shiftSlidesArr()[i]].previewURL}" 
+                alt="${projectsJSON[shiftSlidesArr()[i]].description}"
+                width="100%">
+        </a>`;
     }
+    about.innerHTML = projectsJSON[shiftSlidesArr()[1]].description;
 }
 
 const modifyAllSlides = () => {

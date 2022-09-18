@@ -1,7 +1,7 @@
 .main {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1%;
     & .my-name {
         font-weight: bold;
         text-transform: uppercase;
@@ -113,14 +113,5 @@
             list-style: point inside url("../assets/images/svg/small-check-mark-icon.svg");
         }
     }
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
 }
-
-// .portfolio {
-//     &__carousel {
-//         width: 100%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//     }
-// }
