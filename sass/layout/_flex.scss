@@ -1,4 +1,5 @@
 /* _flex.scss */
+
 .wrapper {
     display: flex;
     min-height: 100vh;
@@ -8,13 +9,11 @@
         display: flex;
         flex-direction: column;
         max-width: $maxScreenWidth + px;
-        width: 100%;
         margin: 0 auto;
     }
 }
 .flex-container {
     display: flex;
-    flex: 1 1 100%;
     gap: 3rem;
 }
 
