@@ -151,13 +151,11 @@ html {
   display: flex;
   flex-direction: column;
   max-width: 1024px;
-  width: 100%;
   margin: 0 auto;
 }
 
 .flex-container {
   display: flex;
-  flex: 1 1 100%;
   gap: 3rem;
 }
 
@@ -190,34 +188,7 @@ html {
   transition: color 0.5s ease-out;
 }
 
-.contacts {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.8rem;
-}
-.contacts__list {
-  line-height: 4.5rem;
-}
-.contacts__link {
-  display: flex;
-  width: 100%;
-}
-.contacts__logo {
-  position: relative;
-}
-.contacts__logo:before {
-  content: "";
-  position: absolute;
-  top: 15%;
-  left: -2.6rem;
-  width: 3.5rem;
-  height: 3.5rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-size: 32px 32px;
-  filter: invert(1);
-}
-
+/* _sidebar.scss */
 .aside {
   display: flex;
   flex-direction: column;
@@ -225,10 +196,10 @@ html {
   color: rgb(243, 236, 236);
   min-width: 200px;
   width: 35%;
-  min-width: 200px;
 }
 .aside .photo {
   max-width: 100%;
+  min-width: 100%;
 }
 
 .cv-list {
@@ -252,6 +223,7 @@ html {
 .cv-list__link {
   display: flex;
   width: 100%;
+  transition: 0.1s ease-out;
 }
 .cv-list__link:hover, .cv-list__link :focus {
   transform: scale(1.015);
@@ -311,8 +283,9 @@ html {
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
-  flex: 1 1 100%;
 }
 .main .my-name {
   font-weight: bold;
@@ -340,15 +313,12 @@ html {
   white-space: nowrap;
 }
 .title__line {
-  height: 100%;
-  position: relative;
-  flex: 1 1 100%;
+  flex: 1 1;
   border-bottom: 1px rgba(49, 54, 68, 0.95) solid;
-  top: 0;
   margin: 0 2rem;
 }
 .title__logo {
-  width: 6rem;
+  min-width: 4.5rem;
   height: 4.5rem;
   border: 1px rgba(49, 54, 68, 0.95) solid;
   border-radius: 50%;
@@ -368,6 +338,9 @@ html {
 .title__logo_person {
   background-image: url("../assets/images/svg/person.svg");
 }
+.title__logo_portfolio {
+  background-image: url("../../assets/images/svg/project.svg");
+}
 
 .description {
   display: flex;
@@ -376,13 +349,14 @@ html {
 }
 .description__period {
   padding-left: 1.5rem;
-  width: 20%;
+  width: 15%;
   height: 100%;
-  min-width: 18rem;
+  min-width: 20%;
   font-style: oblique;
+  margin-right: 2rem;
 }
 .description__item {
-  width: 80%;
+  width: 75%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -400,6 +374,17 @@ html {
   height: 10rem;
   background-size: 7rem;
   background-position: center;
+  transition: 0.2s ease-in-out;
+}
+.description__item_RSS-certificate:hover {
+  filter: invert(1);
+  color: rgb(255, 255, 255);
+  transition: 0.1s ease-in-out;
+}
+.description__item_carousel-position {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .description__header {
   font-weight: bold;
@@ -409,6 +394,67 @@ html {
 }
 .description__text ul li {
   list-style: point inside url("../assets/images/svg/small-check-mark-icon.svg");
+}
+
+/* _caousel.scss */
+.carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel__main-frame {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.carousel__frames-wrapper {
+  animation-duration: 1s;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  right: 20rem;
+}
+.carousel__frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  min-width: 20rem;
+  min-height: 100%;
+}
+.carousel__btn {
+  z-index: 2;
+  height: 5rem;
+  width: 5rem;
+  filter: invert(0.55);
+}
+
+.slide-left {
+  animation-name: slide-left;
+}
+
+.slide-right {
+  animation-name: slide-right;
+}
+
+@keyframes slide-right {
+  from {
+    right: 20rem;
+  }
+  to {
+    right: 40rem;
+  }
+}
+@keyframes slide-left {
+  from {
+    right: 20rem;
+  }
+  to {
+    right: 0rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
