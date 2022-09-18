@@ -76,13 +76,13 @@ h1, h2, h3, h4, h5, h6 {
 /* _variables.scss */ /* _typography.scss */
 @font-face {
   font-family: "Myriad Pro";
-  src: url(../../assets/fonts/MyriadPro-Regular.woff);
+  src: url(../assets/fonts/MyriadPro-Regular.woff);
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Myriad Pro";
-  src: url(../../assets/fonts/MyriadPro-Bold.woff);
+  src: url(../assets/fonts/MyriadPro-Bold.woff);
   font-weight: bold;
   font-style: normal;
 }
@@ -147,6 +147,11 @@ html {
   padding: 0 1.5rem;
   font-size: 2.4rem;
 }
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 0.2rem;
+  }
+}
 .wrapper__container {
   display: flex;
   flex-direction: column;
@@ -179,6 +184,12 @@ html {
   display: flex;
   justify-content: center;
   gap: min(3vw, 10rem);
+}
+@media (max-width: 768px) {
+  .nav__list {
+    gap: 4vw;
+    font-size: 2.2rem;
+  }
 }
 .nav__url-container {
   display: flex;
@@ -230,10 +241,20 @@ html {
   line-height: 2.5;
   backdrop-filter: brightness(80%);
 }
+@media (max-width: 768px) {
+  .cv-list__name {
+    line-height: 2;
+  }
+}
 .cv-list__list {
   padding-top: 3%;
   line-height: 4.2rem;
   margin-bottom: 3%;
+}
+@media (max-width: 768px) {
+  .cv-list__list {
+    font-size: 2.5rem;
+  }
 }
 .cv-list__link {
   display: flex;
@@ -252,6 +273,11 @@ html {
   position: relative;
   padding-left: 20%;
 }
+@media (max-width: 768px) {
+  .cv-list__logo {
+    padding-left: 15%;
+  }
+}
 .cv-list__logo:before {
   content: "";
   position: absolute;
@@ -263,6 +289,11 @@ html {
   background-repeat: no-repeat;
   background-size: 25px 25px;
   filter: invert(1);
+}
+@media (max-width: 768px) {
+  .cv-list__logo:before {
+    left: 6%;
+  }
 }
 .cv-list__logo_phone:before {
   background-image: url("../assets/images/svg/smartphone.svg");
@@ -303,6 +334,12 @@ html {
   flex-direction: column;
   padding: 1%;
 }
+@media (max-width: 768px) {
+  .main {
+    padding-left: 3%;
+    padding-top: 2rem;
+  }
+}
 .main .my-name {
   font-weight: bold;
   text-transform: uppercase;
@@ -312,6 +349,12 @@ html {
 .main .my-name h1 {
   line-height: 7rem;
   font-size: 4.5rem;
+}
+@media (max-width: 768px) {
+  .main .my-name h1 {
+    line-height: 120%;
+    margin-bottom: 1rem;
+  }
 }
 .main .my-name h3 {
   font-size: 3rem;
@@ -370,12 +413,23 @@ html {
   font-style: oblique;
   margin-right: 2rem;
 }
+@media (max-width: 768px) {
+  .description__period {
+    min-width: 8%;
+    margin-right: 1rem;
+  }
+}
 .description__item {
   width: 75%;
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .description__item {
+    width: 85%;
+  }
 }
 .description__item_RSS-certificate {
   display: block;
@@ -415,6 +469,11 @@ html {
 .description__text {
   margin-right: 7rem;
 }
+@media (max-width: 768px) {
+  .description__text {
+    margin-right: 1rem;
+  }
+}
 .description__text ul li {
   list-style: point inside url("../assets/images/svg/small-check-mark-icon.svg");
 }
@@ -443,14 +502,21 @@ html {
 
 /* _carousel.scss */
 .carousel {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .carousel {
+    gap: 0.7rem;
+  }
 }
 @media (max-width: 768px) {
   .carousel {
-    width: 30rem;
+    width: 35rem;
     gap: 2rem;
   }
   .carousel__btn {
@@ -470,45 +536,44 @@ html {
 }
 .carousel__frames-wrapper {
   animation-duration: 1s;
-  width: 50rem;
+  width: 60rem;
   display: flex;
   position: relative;
   z-index: 1;
-  right: 50rem;
+  right: 60rem;
 }
 @media (max-width: 1024px) {
   .carousel__frames-wrapper {
-    width: 38rem;
-    right: 38rem;
+    width: 43rem;
+    right: 43rem;
   }
 }
 @media (max-width: 768px) {
   .carousel__frames-wrapper {
-    width: 30rem;
-    right: 30rem;
+    width: 35rem;
+    right: 35rem;
   }
 }
 .carousel__frame {
   display: flex;
-  min-width: 50rem;
+  min-width: 60rem;
 }
 @media (max-width: 1024px) {
   .carousel__frame {
-    min-width: 38rem;
+    min-width: 43rem;
   }
 }
 @media (max-width: 768px) {
   .carousel__frame {
-    min-width: 30rem;
+    min-width: 35rem;
   }
 }
 .carousel__btn {
   z-index: 2;
-  height: calc(50rem / 8);
-  width: calc(50rem / 8);
-  margin: 0 calc(50rem / 20);
-  filter: invert(0.55);
+  height: calc(60rem / 8);
+  width: calc(60rem / 8);
   transition: 0.1s ease-in-out;
+  filter: invert(0.55);
 }
 .carousel__btn:hover {
   transform: scale(1.05);
@@ -545,15 +610,15 @@ html {
 
 @keyframes slide-right {
   from {
-    right: 50rem;
+    right: 60rem;
   }
   to {
-    right: 100rem;
+    right: 120rem;
   }
 }
 @keyframes slide-left {
   from {
-    right: 50rem;
+    right: 60rem;
   }
   to {
     right: 0;
@@ -562,15 +627,15 @@ html {
 @media (max-width: 1024px) {
   @keyframes slide-right {
     from {
-      right: 38rem;
+      right: 43rem;
     }
     to {
-      right: 76rem;
+      right: 86rem;
     }
   }
   @keyframes slide-left {
     from {
-      right: 38rem;
+      right: 43rem;
     }
     to {
       right: 0;
@@ -580,15 +645,15 @@ html {
 @media (max-width: 768px) {
   @keyframes slide-right {
     from {
-      right: 30rem;
+      right: 35rem;
     }
     to {
-      right: 60rem;
+      right: 70rem;
     }
   }
   @keyframes slide-left {
     from {
-      right: 30rem;
+      right: 35rem;
     }
     to {
       right: 0;

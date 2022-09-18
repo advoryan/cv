@@ -13,6 +13,10 @@
         display: flex;
         justify-content: center;
         gap: min(3vw, 10rem);
+        @include _767 {
+            gap: 4vw;
+            font-size: 2.2rem;
+        }
     }
     &__url-container {
         display: flex;
