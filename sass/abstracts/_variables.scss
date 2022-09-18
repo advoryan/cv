@@ -12,6 +12,17 @@ $maxScreenWidth: 1024;
 $maxTabletWidth: 767;
 $maxMobileWidth: 320;
 
+@mixin _767 {
+    @media (max-width: ($maxTabletWidth + 1) + px) {
+        @content;
+    }
+}
+@mixin _1024 {
+    @media (max-width: $maxScreenWidth + px) {
+        @content;
+    }
+}
+
 @mixin adapive-font-size($max, $min) {
     @media (max-width: ($maxScreenWidth + px)) {
         $widthGap: $maxScreenWidth - $maxMobileWidth;
