@@ -13,7 +13,7 @@ $maxTabletWidth: 767;
 $maxMobileWidth: 320;
 
 @mixin _767 {
-    @media (max-width: ($maxTabletWidth + 1) + px) {
+    @media (max-width: ($maxTabletWidth+1) + px) {
         @content;
     }
 }

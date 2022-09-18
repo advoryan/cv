@@ -1,15 +1,19 @@
 /* _carousel.scss */
 
-$frame-size: 50rem;
-$frame-size_1024: 38rem;
-$frame-size_767: 30rem;
+$frame-size: 60rem;
+$frame-size_1024: 43rem;
+$frame-size_767: 35rem;
 
 .carousel {
-    // width: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 2rem;
+    @include _1024 {
+        gap: 0.7rem;
+    }
     @include _767 {
         width: $frame-size_767;
         gap: 2rem; 
@@ -46,8 +50,6 @@ $frame-size_767: 30rem;
     }
     &__frame {
         display: flex;
-        // justify-content: center;
-        // align-items: center;
         min-width: $frame-size;
         @include _1024 {
             $frame-size: $frame-size_1024;
@@ -62,9 +64,8 @@ $frame-size_767: 30rem;
         z-index: 2;
         height: calc(#{$frame-size} / 8);
         width: calc(#{$frame-size} / 8);
-        margin: 0 calc(#{$frame-size} / 20);
-        filter: invert(0.55);
         transition: 0.1s ease-in-out;
+        filter: invert(0.55);
         &:hover {
             transform: scale(1.05);
             cursor: pointer;
