@@ -51,13 +51,13 @@
 
             <aside class="aside">
 
-                <article class="aside__item">
+                <div class="aside__item">
                     <img 
                         class="photo" 
                         src="./assets/images/my-cv-photo.jpg" 
                         alt="Frontender which is hunger for a job"
                     >
-                </article>
+                </div>
 
                 <section class="aside__item cv-list">
                     <h2 class="cv-list__name">Contacts</h2>
@@ -384,8 +384,8 @@
                         <div class="title__logo title__logo_portfolio"></div>
                     </div>
 
-                    <div class="description">
-                        <!-- <div class="description__period">Описание</div> -->
+                    <div class="description description__carousel">
+
                         <div class="description__item description__item_carousel-position">
 
                             <div class="description__period about-slide__carousel">
@@ -393,6 +393,7 @@
                             </div>
 
                             <div class="carousel">
+                                
                                 <div class="carousel__btn carousel__btn_slide-left">
                                     <img src="/assets/images/svg/left-arrow.svg" alt="left">
                                 </div>
@@ -405,9 +406,11 @@
                                 <div class="carousel__btn carousel__btn_slide-right">
                                     <img src="/assets/images/svg/left-arrow.svg" style="transform: rotate(180deg);" alt="left">
                                 </div>
+
                             </div>
 
                         </div>
+
                     </div>
                    
                 </section>
@@ -416,16 +419,22 @@
 
         </div>
 
-        <footer>
-            
-            
+        <footer class="footer">
+            <ul class="footer__items-list">
+                <li class="footer__item current-date">2022</li>
+                <li class="footer__item">© Aliaksandr Dvaraninau</li>
+                <li class="footer__item">Feel free to contact</li>
+            </ul>
 
+
+            
         </footer>
 
 
     </div>
 </div>
 
+<script src="script/index.js"></script>
 <script src="script/carousel.js"></script>
 
 </body>
