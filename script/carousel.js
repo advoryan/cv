@@ -70,7 +70,7 @@ const createSlide = (slideNbr) => {
     newFrame.className = "carousel__frame";
     newFrame.innerHTML = `
     <a href="${projectsJSON[slideNbr].sourceURL}" target="_blank">
-        <img src="/assets/images/carousel/${projectsJSON[slideNbr].previewURL}" 
+        <img src="./assets/images/carousel/${projectsJSON[slideNbr].previewURL}" 
             alt="${projectsJSON[slideNbr].description}"
             width="100%">
     </a>`;
@@ -89,7 +89,7 @@ const modifySlide = () => {
     for (let i = 0; i < slides.length; i++) {
         slides[i].innerHTML = `
         <a href="${projectsJSON[shiftSlidesArr()[i]].sourceURL}" target="_blank">
-            <img src="/assets/images/carousel/${projectsJSON[shiftSlidesArr()[i]].previewURL}" 
+            <img src="./assets/images/carousel/${projectsJSON[shiftSlidesArr()[i]].previewURL}" 
                 alt="${projectsJSON[shiftSlidesArr()[i]].description}"
                 width="100%">
         </a>`;

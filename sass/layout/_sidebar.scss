@@ -14,10 +14,7 @@
         max-width: 100%;
         min-width: 100%;
         @include _767 {
-            // overflow: hidden;
             object-fit: cover;
-            // max-height: 700px;
-            // max-width: 100px;
         }
     }
 }
