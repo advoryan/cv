@@ -1,4 +1,5 @@
-const dateTag = document.querySelector('.current-date')
+import("./carousel.js");
 
-let year = new Date().getFullYear();
-dateTag.innerHTML = year;
+const dateTag = document.querySelector('.current-date')
+let currentYear = new Date().getFullYear();
+dateTag.innerHTML = currentYear || "2022";

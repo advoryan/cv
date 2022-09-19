@@ -17,7 +17,7 @@
 }
 .flex-container {
     display: flex;
-    gap: 2vw;
+    gap: 3rem;
     @include _767 {
         flex-direction: column;
     }
