@@ -16,8 +16,8 @@ html {
     scroll-behavior: smooth;
     font-family: $main-font;
     color: black;
+    font-size: 0.57rem;
     @include _767 {
-        font-size: 9px;
         font-size: 2.5vw;
     }
 }

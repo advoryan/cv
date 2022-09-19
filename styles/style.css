@@ -90,10 +90,10 @@ html {
   scroll-behavior: smooth;
   font-family: "Myriad Pro";
   color: black;
+  font-size: 0.57rem;
 }
 @media (max-width: 768px) {
   html {
-    font-size: 9px;
     font-size: 2.5vw;
   }
 }
@@ -167,7 +167,7 @@ html {
 
 .flex-container {
   display: flex;
-  gap: 2vw;
+  gap: 3rem;
 }
 @media (max-width: 768px) {
   .flex-container {
@@ -279,9 +279,15 @@ html {
   position: relative;
   padding-left: 5rem;
 }
+@media (max-width: 1024px) {
+  .cv-list__logo {
+    font-size: 1.5rem;
+  }
+}
 @media (max-width: 768px) {
   .cv-list__logo {
     padding-left: 6.5rem;
+    font-size: 2rem;
   }
 }
 .cv-list__logo:before {
@@ -363,7 +369,7 @@ html {
 }
 @media (max-width: 768px) {
   .main {
-    padding-left: 3%;
+    padding-left: 1rem;
     padding-top: 2rem;
   }
 }
@@ -372,6 +378,7 @@ html {
   text-transform: uppercase;
   color: rgba(49, 54, 68, 0.95);
   margin-bottom: 2.5rem;
+  text-align: center;
 }
 .main .my-name h1 {
   line-height: 7rem;
@@ -480,8 +487,10 @@ html {
 }
 @media (max-width: 768px) {
   .description__item_RSS-certificate {
+    top: 1.2rem;
     left: auto;
-    right: 2vw;
+    right: 3vw;
+    background-size: 7rem 7rem;
   }
 }
 .description__item_carousel-position {
@@ -505,7 +514,7 @@ html {
   list-style: point inside url("../assets/images/svg/small-check-mark-icon.svg");
 }
 .description__carousel {
-  margin-right: 2vw;
+  margin-right: min(3rem, 2vw);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -527,6 +536,13 @@ html {
   row-gap: 0rem;
   column-gap: 2rem;
 }
+.footer__item a:hover {
+  display: flex;
+  position: relative;
+  color: rgb(192, 81, 41);
+  transform: scale(1.2) translate(1.5rem, 0);
+  transition: 0.2s ease-in-out;
+}
 
 /* _carousel.scss */
 .carousel {
@@ -534,8 +550,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 @media (max-width: 1024px) {
   .carousel {
@@ -544,9 +559,10 @@ html {
 }
 @media (max-width: 768px) {
   .carousel {
+    flex-wrap: wrap;
     width: 35rem;
     gap: 2rem;
-    column-gap: 5rem;
+    column-gap: 3rem;
   }
   .carousel__btn {
     order: 2;

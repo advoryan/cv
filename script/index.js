@@ -1,4 +1,5 @@
 const dateTag = document.querySelector('.current-date')
 
-let year = new Date().getFullYear();
-dateTag.innerHTML = year;
+let currentYear = new Date().getFullYear();
+
+dateTag.innerHTML = currentYear || "2022";

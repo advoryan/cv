@@ -58,8 +58,12 @@
         width: 100%;
         position: relative;
         padding-left: 5rem;
+        @include _1024 {
+            font-size: 1.5rem;
+        }
         @include _767 {
             padding-left: 6.5rem;
+            font-size: 2rem;
         }
         &:before {
             content: "";
@@ -104,7 +108,7 @@
         border-image: linear-gradient(to right, rgba(245, 241, 241, 0.2) 20%, rgba(245, 241, 241, 0.05) 80%, transparent 99%) 0.5;
     }
     &__item:hover {
-        cursor:context-menu;
+        cursor: context-menu;
     }
     &__item:nth-child(1) &__skill {
         border-top: none;

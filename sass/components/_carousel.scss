@@ -9,15 +9,15 @@ $frame-size_767: 35rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     @include _1024 {
         gap: 0.7rem;
     }
     @include _767 {
+        flex-wrap: wrap;
         width: $frame-size_767;
         gap: 2rem;
-        column-gap: 5rem; 
+        column-gap: 3rem; 
         &__btn {
             order: 2;
         }

@@ -5,14 +5,15 @@
     flex-direction: column;
     padding: 1%;
     @include _767 {
-        padding-left: 3%;
-        padding-top:2rem;
+        padding-left: 1rem;
+        padding-top: 2rem;
     }
     & .my-name {
         font-weight: bold;
         text-transform: uppercase;
         color: $aside-bg-color;
         margin-bottom: 2.5rem;
+        text-align: center;
         & h1 {
             line-height: 7rem;
             font-size: 4.5rem;
@@ -112,8 +113,11 @@
                 transition: 0.1s ease-in-out;
             }
             @include _767 {
+                top: 1.2rem;
                 left: auto;
-                right: 2vw;
+                right: 3vw;
+                // font-size: 0;
+                background-size: 7rem 7rem;
             }
         }
         &_carousel-position {
@@ -136,7 +140,7 @@
         }
     }
     &__carousel {
-        margin-right: 2vw;
+        margin-right: min(3rem, 2vw);
         display: flex;
         justify-content: center;
         align-items: center;
