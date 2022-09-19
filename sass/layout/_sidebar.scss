@@ -117,12 +117,16 @@
 
 @include _767 {
     .cv-list_moblie {
+        display: flex;
         min-width: 100%;
+        align-items: center;
+        & h2 {
+            width: 100%;
+        }
         & .cv-list__list {
             display: flex;
-            padding-left: 1.4rem;
             flex-wrap: wrap;
-            width: 100%;
+            width: 97%;
             & .cv-list__item {
                 width: 50%;
                 & .cv-list__skill {
