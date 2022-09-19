@@ -193,13 +193,13 @@ html {
 }
 @media (max-width: 768px) {
   .nav__list {
-    gap: 4vw;
+    gap: 1.25rem;
     font-size: 2.2rem;
   }
 }
 .nav__url-container {
   display: flex;
-  min-height: 6rem;
+  min-height: 5.5rem;
 }
 .nav__url {
   color: rgba(49, 54, 68, 0.95);
@@ -270,7 +270,7 @@ html {
 }
 @media (max-width: 768px) {
   .cv-list__link {
-    font-size: max(2.2rem, 3.5vw);
+    font-size: 2.2rem;
   }
 }
 .cv-list__logo {
@@ -281,7 +281,7 @@ html {
 }
 @media (max-width: 768px) {
   .cv-list__logo {
-    padding-left: 22%;
+    padding-left: 6.5rem;
   }
 }
 .cv-list__logo:before {
@@ -298,7 +298,7 @@ html {
 }
 @media (max-width: 768px) {
   .cv-list__logo:before {
-    left: 2.1rem;
+    left: 2.25rem;
   }
 }
 .cv-list__logo_phone:before {
@@ -353,20 +353,6 @@ html {
   .cv-list_moblie .cv-list__list .cv-list__item .cv-list__skill_no-top-border {
     border-top: 0.1px solid;
     border-image: linear-gradient(to right, rgba(245, 241, 241, 0.2) 20%, rgba(245, 241, 241, 0.05) 80%, transparent 99%) 0.5;
-  }
-}
-@media (max-width: 768px) {
-  #contacts .cv-list {
-    min-width: 100%;
-  }
-  #contacts .cv-list__list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  #contacts .cv-list__item {
-    width: 50%;
-    min-width: 30rem;
   }
 }
 /* _main.scss */
@@ -424,7 +410,7 @@ html {
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 20px 20px;
+  background-size: 2.5rem 2.5rem;
   margin-right: 1rem;
   background-color: rgba(206, 201, 187, 0.55);
   filter: invert(1);

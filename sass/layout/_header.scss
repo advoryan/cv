@@ -14,13 +14,13 @@
         justify-content: center;
         gap: min(3vw, 10rem);
         @include _767 {
-            gap: 4vw;
+            gap: 1.25rem;
             font-size: 2.2rem;
         }
     }
     &__url-container {
         display: flex;
-        min-height: 6rem;
+        min-height: 5.5rem;
      }
     &__url {
         color: $aside-bg-color;
