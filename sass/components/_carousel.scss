@@ -1,0 +1,157 @@
+/* _carousel.scss */
+
+$frame-size: 60rem;
+$frame-size_1024: 43rem;
+$frame-size_767: 35rem;
+
+.carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    @include _1024 {
+        gap: 0.7rem;
+    }
+    @include _767 {
+        flex-wrap: wrap;
+        width: $frame-size_767;
+        gap: 2rem;
+        column-gap: 3rem; 
+        &__btn {
+            order: 2;
+        }
+    }
+    &__main-frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;        
+        @include _767 {
+            order: 1;
+        }
+    }
+    &__frames-wrapper {
+        animation-duration: 1s;
+        width: $frame-size;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        right: $frame-size;
+        @include _1024 {
+            $frame-size: $frame-size_1024;
+            width: $frame-size;
+            right: $frame-size;
+        }
+        @include _767 {
+            $frame-size: $frame-size_767;
+            width: $frame-size;
+            right: $frame-size;
+        }
+    }
+    &__frame {
+        display: flex;
+        min-width: $frame-size;
+        @include _1024 {
+            $frame-size: $frame-size_1024;
+            min-width: $frame-size;
+        }
+        @include _767 {
+            $frame-size: $frame-size_767;
+            min-width: $frame-size;
+        }
+    }
+    &__btn {
+        z-index: 2;
+        height: calc(#{$frame-size} / 8);
+        width: calc(#{$frame-size} / 8);
+        transition: 0.1s ease-in-out;
+        filter: invert(0.55);
+        &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            filter: invert(0.55) drop-shadow(0 0 0.55rem rgb(231, 230, 223));
+            transition: 0.1s ease-in-out;
+        }
+        &:active {
+            transform: scale(1);
+            cursor: pointer;
+            filter: invert(0.55) drop-shadow(0 0 0.55rem rgb(231, 230, 223));
+            transition: 0.1s ease-in-out;
+        }
+    }
+}
+
+.about-slide {
+    display: flex;
+    justify-content: center;
+    &__carousel {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    &__text {
+        text-align: center;
+    }
+}
+
+.slide-left {
+    animation-name: slide-left;
+}
+.slide-right {
+    animation-name: slide-right;
+}
+
+@keyframes slide-right {
+    from {
+        right: $frame-size;
+    }
+    to {
+        right: calc($frame-size * 2);
+    }   
+}
+@keyframes slide-left {
+    from {
+        right: $frame-size;
+    }
+    to {
+        right: 0;
+    }   
+}
+@include _1024 {
+    $frame-size:  $frame-size_1024;
+    @keyframes slide-right {
+        from {
+            right: $frame-size;
+        }
+        to {
+            right: calc($frame-size * 2);
+        }   
+    }
+    @keyframes slide-left {
+        from {
+            right: $frame-size;
+        }
+        to {
+            right: 0;
+        }   
+    }
+}
+@include _767 {
+    $frame-size:  $frame-size_767;
+    @keyframes slide-right {
+        from {
+            right: $frame-size;
+        }
+        to {
+            right: calc($frame-size * 2);
+        }   
+    }
+    @keyframes slide-left {
+        from {
+            right: $frame-size;
+        }
+        to {
+            right: 0;
+        }   
+    }
+}

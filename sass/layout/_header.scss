@@ -1,0 +1,33 @@
+/* _header.scss */
+
+.header {
+    display: flex;
+    color: black;
+    position: sticky;
+    z-index: 100;
+}
+
+.nav {
+    width: 100%;
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: min(3vw, 10rem);
+        @include _767 {
+            gap: 1.25rem;
+            font-size: 2.2rem;
+        }
+    }
+    &__url-container {
+        display: flex;
+        min-height: 5.5rem;
+     }
+    &__url {
+        color: $aside-bg-color;
+        transition: color 0.5s ease-out;
+        &:hover, :focus, :active {
+            color: $orange;
+            transition: color 0.5s ease-out;
+        }
+    }
+}

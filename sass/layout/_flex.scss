@@ -1,0 +1,26 @@
+/* _flex.scss */
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    padding: 0 1.5rem;
+    font-size: 2.4rem;
+    @include _767 {
+        padding: 0 0.2rem;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: $maxScreenWidth + px;
+        margin: 0 auto;
+    }
+}
+.flex-container {
+    display: flex;
+    gap: 3rem;
+    @include _767 {
+        flex-direction: column;
+    }
+}
+
+
