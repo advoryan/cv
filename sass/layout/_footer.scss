@@ -1,0 +1,29 @@
+.footer {
+    width: 100%;
+    height: 7rem;
+    font-size: 2rem;
+    color: $aside-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__items-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 0rem;
+        column-gap: 2rem;        
+    }
+    &__item {
+        & a {
+            text-decoration: underline;
+            transition: 0.9s ease-in-out; 
+        }
+        & a:hover {
+            display: flex;
+            position: relative;
+            color: $orange;
+            transition: 0.2s ease-in-out;
+            transform: scale(1.2) translate(1.5rem, 0);
+        }
+    }
+}

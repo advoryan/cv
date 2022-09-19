@@ -1,0 +1,147 @@
+/* _main.scss */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    @include _767 {
+        padding-left: 1rem;
+        padding-top: 2rem;
+    }
+    & .my-name {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $aside-bg-color;
+        margin-bottom: 2.5rem;
+        text-align: center;
+        & h1 {
+            line-height: 7rem;
+            font-size: 4.5rem;
+            @include _767 {
+                line-height: 120%;
+                margin-bottom: 1rem;
+            }
+        }
+        & h3 {
+            font-size: 3rem;
+            color: $orange;
+        }
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    &__name {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    &__line {
+        flex: 1 1;
+        border-bottom: 1px $aside-bg-color solid;
+        margin: 0 2rem;
+    }
+    &__logo {
+        min-width: 4.5rem;
+        height: 4.5rem;
+        border: 1px $aside-bg-color solid;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 2.5rem 2.5rem;
+        margin-right: 1rem;
+        background-color: rgb(206, 201, 187, 0.55);
+        filter: invert(1);
+        &_education {
+            background-image: url("../assets/images/svg/education.svg");
+        }
+        &_experiance {
+            background-image: url("../assets/images/svg/job.svg");
+        }
+        &_person {
+            background-image: url("../assets/images/svg/person.svg");
+        }
+        &_portfolio {
+            background-image: url("../assets/images/svg/project.svg");
+        }
+    }
+    margin-bottom: 2rem;
+}
+
+.description {
+    display: flex;
+    font-size: 1.8rem;
+    &__period {
+        padding-left: 1.5rem;
+        width: 15%;
+        height: 100%;
+        min-width: 20%;
+        font-style: oblique;
+        margin-right: 2rem;
+        @include _767 {
+            min-width: 20%;
+            margin-right: 1rem;
+        }
+    }
+    &__item {
+        width: 75%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        @include _767 {
+            width: 85%;
+        }
+        &_RSS-certificate {
+            display: block;
+            position: absolute;
+            text-align: center;
+            font-size: 1rem;
+            left: 29.5rem;
+            top: 0;
+            background-image: url(../assets/images/svg/logo-rs.svg);
+            background-repeat: no-repeat;
+            width: 7rem;
+            height: 10rem;
+            background-size: 7rem;
+            background-position: center;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                filter: invert(1);
+                color: rgb(255, 255, 255);
+                transition: 0.1s ease-in-out;
+            }
+            @include _767 {
+                top: 1.2rem;
+                left: auto;
+                right: 3vw;
+                background-size: 7rem 7rem;
+            }
+        }
+        &_carousel-position {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    }
+    &__header {
+        font-weight: bold;
+    }
+    &__text {
+        margin-right: 7rem;
+        @include _767 {
+            margin-right: 1rem;
+        }
+        & ul li {
+            list-style: point inside url("../assets/images/svg/small-check-mark-icon.svg");
+        }
+    }
+    &__carousel {
+        margin-right: min(3rem, 2vw);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

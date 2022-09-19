@@ -1,0 +1,36 @@
+/* _variables.scss */
+
+$wrapper-bg-color: rgba(136, 132, 132, 0.4);
+$bg-color: rgb(251, 255, 252);
+$bg-color-transparent: rgb(251, 255, 252, 0.95);
+$orange: rgb(192, 81, 41);
+$aside-bg-color: rgb(49,54,68,0.95);
+
+$main-font: "Myriad Pro";
+
+$maxScreenWidth: 1024;
+$maxTabletWidth: 767;
+$maxMobileWidth: 320;
+
+@mixin _767 {
+    @media (max-width: ($maxTabletWidth+1) + px) {
+        @content;
+    }
+}
+@mixin _1024 {
+    @media (max-width: $maxScreenWidth + px) {
+        @content;
+    }
+}
+
+@mixin adapive-font-size($max, $min) {
+    @media (max-width: ($maxScreenWidth + px)) {
+        $widthGap: $maxScreenWidth - $maxMobileWidth;
+        $a: (-1/$widthGap*$min) + (1/$widthGap*$max);
+        $b: ($maxScreenWidth/$widthGap*$min) + ($maxMobileWidth/-$widthGap*$max);
+        font-size: calc(100vw * #{$a} + #{$b + px});
+    } 
+    @media (min-width: ($maxScreenWidth + px)) {
+        font-size: $max + px;
+    }
+}
