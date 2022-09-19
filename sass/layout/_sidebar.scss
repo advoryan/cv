@@ -38,9 +38,6 @@
         padding-top: 3%;
         line-height: 4.2rem;
         margin-bottom: 3%;
-        @include _767 {
-            font-size: 2.5rem;
-        }
     }
     &__link {
         display: flex;
@@ -52,28 +49,31 @@
             backdrop-filter: brightness(80%);
             width: 99%;
         }
+        @include _767 {
+            font-size: max(2.2rem, calc(1.5vw + 1vw/0.5));
+        }
     }
     &__logo {
         display: flex;
         width: 100%;
         position: relative;
-        padding-left: 20%;
+        padding-left: 5rem;
         @include _767 {
-            padding-left: 15%;
+            padding-left: 22%;
         }
         &:before {
             content: "";
             position: absolute;
-            top: 12%;
-            left: 5.1%;
+            top: 0.8rem;
+            left: 1.25rem;
             width: 3.5rem;
             height: 3.5rem;
             background-size: contain;
             background-repeat: no-repeat;
-            background-size: 25px 25px;
+            background-size: 2.5rem 2.5rem;
             filter: invert(1);
             @include _767 {
-                left: 6%;
+                left: 2.1rem;
             }
         }
         &_phone {
@@ -111,3 +111,42 @@
     }
 }
 
+@include _767 {
+    .cv-list_moblie {
+        min-width: 100%;
+        & .cv-list__list {
+            display: flex;
+            padding-left: 1.4rem;
+            flex-wrap: wrap;
+            width: 100%;
+            & .cv-list__item {
+                width: 50%;
+                & .cv-list__skill {
+                    // font-size: max(1.7rem, calc(1vw + 1vw/0.45));
+                    // line-height: max(3rem, calc(3vw + 1vw/0.5));;
+                    font-size: 1.8rem;
+                }
+                & .cv-list__skill_no-top-border {
+                    border-top: 0.1px solid;
+                    border-image: linear-gradient(to right, rgba(245, 241, 241, 0.2) 20%, rgba(245, 241, 241, 0.05) 80%, transparent 99%) 0.5;
+                }
+            }
+        }
+    }
+}
+
+@include _767 {
+    #contacts .cv-list {
+        min-width: 100%;
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        &__item {
+            width: 50%;
+            min-width: 30rem;
+            // font-size: 100%;
+        }
+    }
+}

@@ -11,6 +11,7 @@ $main-font: "Myriad Pro";
 $maxScreenWidth: 1024;
 $maxTabletWidth: 767;
 $maxMobileWidth: 320;
+$contactBreackPoint: 500;
 
 @mixin _767 {
     @media (max-width: ($maxTabletWidth+1) + px) {
