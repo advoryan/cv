@@ -16,7 +16,8 @@ $frame-size_767: 35rem;
     }
     @include _767 {
         width: $frame-size_767;
-        gap: 2rem; 
+        gap: 2rem;
+        column-gap: 5rem; 
         &__btn {
             order: 2;
         }

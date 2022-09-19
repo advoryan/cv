@@ -135,7 +135,7 @@ html {
   width: 0;
   bottom: 0.9rem;
   background: rgb(192, 81, 41);
-  height: 3px;
+  height: 0.3rem;
   transition-property: width;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
@@ -524,7 +524,8 @@ html {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  row-gap: 0rem;
+  column-gap: 2rem;
 }
 
 /* _carousel.scss */
@@ -545,6 +546,7 @@ html {
   .carousel {
     width: 35rem;
     gap: 2rem;
+    column-gap: 5rem;
   }
   .carousel__btn {
     order: 2;
