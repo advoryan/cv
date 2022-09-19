@@ -14,12 +14,16 @@
         column-gap: 2rem;        
     }
     &__item {
+        & a {
+            text-decoration: underline;
+            transition: 0.9s ease-in-out; 
+        }
         & a:hover {
             display: flex;
             position: relative;
             color: $orange;
-            transform: scale(1.2) translate(1.5rem, 0);
             transition: 0.2s ease-in-out;
+            transform: scale(1.2) translate(1.5rem, 0);
         }
     }
 }
