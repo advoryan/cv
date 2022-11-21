@@ -36,6 +36,8 @@ let projectsJSON = [
     },
 ]
 
+console.log(JSON.stringify(projectsJSON))
+
 const carousel = document.querySelector(".carousel");
 const framesWrapper = carousel.querySelector(".carousel__frames-wrapper");
 const slideLeftBtn = carousel.querySelector(".carousel__btn_slide-left");
