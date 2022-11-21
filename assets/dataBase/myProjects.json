@@ -1,0 +1,37 @@
+[
+    {    
+        "description": "Multilanguage portfolio for photographer",
+        "previewURL": "photographer.jpg",
+        "sourceURL": "https://advoryan.github.io/rss-portfolio/portfolio/",
+    },
+    {    
+        "description": "Virtual keyboard for Windows",
+        "previewURL": "virtual-kboard.jpg",
+        "sourceURL": "https://advoryan.github.io/Vitual-Keyboard/",
+    },
+    {    
+        "description": "Unsplash API for images search",
+        "previewURL": "unsplash-search.jpg",
+        "sourceURL": "https://advoryan.github.io/rss-portfolio/image-galery/",
+    },
+    {    
+        "description": "Shelter for Pest. Pagination + endless salider",
+        "previewURL": "shelter.jpg",
+        "sourceURL": "https://advoryan.github.io/pets-shelter/shelter/pages/main/",
+    },
+    {    
+        "description": "Pure and simple CSS-Slider",
+        "previewURL": "css-meme-slider.jpg",
+        "sourceURL": "https://advoryan.github.io/cssMemSlider/",
+    },
+    {    
+        "description": "Tic-Tac-Toe game for two with TOP-Score",
+        "previewURL": "tic-tac-toe.jpg",
+        "sourceURL": "https://advoryan.github.io/rss-portfolio/tic-tac-toe/",
+    },
+    {    
+        "description": "Custom video player (DOM, JS+CSS)",
+        "previewURL": "custom-video.jpg",
+        "sourceURL": "https://advoryan.github.io/rss-portfolio/custom-video/",
+    }
+]

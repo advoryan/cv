@@ -352,7 +352,7 @@ html {
   .cv-list_moblie .cv-list__list {
     display: flex;
     flex-wrap: wrap;
-    width: 97%;
+    width: 98%;
   }
   .cv-list_moblie .cv-list__list .cv-list__item {
     width: 50%;
@@ -540,12 +540,16 @@ html {
   row-gap: 0rem;
   column-gap: 2rem;
 }
+.footer__item a {
+  text-decoration: underline;
+  transition: 0.9s ease-in-out;
+}
 .footer__item a:hover {
   display: flex;
   position: relative;
   color: rgb(192, 81, 41);
-  transform: scale(1.2) translate(1.5rem, 0);
   transition: 0.2s ease-in-out;
+  transform: scale(1.2) translate(1.5rem, 0);
 }
 
 /* _carousel.scss */
