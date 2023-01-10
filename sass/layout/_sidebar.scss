@@ -17,6 +17,23 @@
             object-fit: cover;
         }
     }
+    &__item {
+        position: relative;
+    }
+    &__pdf {
+        position: absolute;
+        width: 20%;
+        bottom: 10px;
+        right: 2px;
+        transition: 0.1s;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7444%) hue-rotate(320deg) brightness(103%) contrast(100%);
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.1s;
+            filter: brightness(0) saturate(100%) invert(37%) sepia(65%) saturate(718%) hue-rotate(333deg) brightness(193%) contrast(93%);
+        }
+    } 
 }
 
 .cv-list {
